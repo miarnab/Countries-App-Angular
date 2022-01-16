@@ -1,0 +1,42 @@
+<div class="centerdiv">
+  <h1>List of Countries</h1>
+</div>
+<br>
+<br>
+<div class="dropdown container centerdiv">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    Sort Table
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <li><a class="dropdown-item" (onclick)="sortCountryASC()">Country (A-Z)</a></li>
+    <li><a class="dropdown-item" (onclick)="sortCountryDESC()">Country (Z-A)</a></li>
+    <li><a class="dropdown-item" (onclick)="sortPopulationASC()">Population (Low to High)</a></li>
+    <li><a class="dropdown-item" (onclick)="sortPopulationDESC()">Population (High to Low)</a></li>
+  </ul>
+</div>
+<br>
+<br>
+<div class="container centerdiv" *ngIf="countries">
+  <table class="table table-striped table-hover table-bordered border-success">
+  <thead class="table-dark">
+    <tr>
+      <td>Serial Number</td>
+      <td>Country</td>
+      <td>Capital</td>
+      <td>Continent</td>
+      <td>Google Map</td>
+      <td>Population</td>
+    </tr>
+  </thead>
+  <tbody *ngFor="let country of countries | async, let i=index">
+    <tr>
+      <td>{{ i+1 }}</td>
+      <td>{{ country.name.common }}</td>
+      <td>{{ country.capital }}</td>
+      <td>{{ country.continents }}</td>
+      <td><a href="{{ country.maps.googleMaps }}" target="_blank">View Map</a></td>
+      <td>{{ country.population }}</td>
+    </tr>
+  </tbody>
+</table>
+</div>
