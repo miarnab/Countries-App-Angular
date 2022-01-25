@@ -31,7 +31,10 @@
               "./node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": [
-              "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+              "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+              "./node_modules/@fortawesome/fontawesome-free/js/brands.js",
+              "./node_modules/@fortawesome/fontawesome-free/js/solid.js",
+              "./node_modules/@fortawesome/fontawesome-free/js/fontawesome.js"
             ]
           },
           "configurations": {
@@ -39,8 +42,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "5mb",
+                  "maximumError": "5mb"
                 },
                 {
                   "type": "anyComponentStyle",
