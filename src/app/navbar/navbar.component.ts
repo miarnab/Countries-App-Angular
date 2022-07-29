@@ -27,5 +27,8 @@ export class NavbarComponent implements OnInit {
           .subscribe(continents=>this.continents=continents)
     })
   }
+  sortbyRegion(){
+
+  }
 
 }

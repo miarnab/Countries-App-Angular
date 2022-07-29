@@ -18,17 +18,4 @@ export class ShowCountriesComponent implements OnInit {
   ngOnInit(): void {
     this.countries=this.countriesapiservice.getData();
   }
-
-  sortCountryASC(){
-    this.countries.sort((a: { name: { common: string; }; },b: { name: { common: string; }; })=>a.name.common.localeCompare(b.name.common));
-  }
-  sortCountryDESC(){
-
-  }
-  sortPopulationASC(){
-
-  }
-  sortPopulationDESC(){
-
-  }
 }

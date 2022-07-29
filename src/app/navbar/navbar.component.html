@@ -17,7 +17,7 @@
             Regions
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#" *ngFor="let continent of continents">{{ continent.region }}</a></li>
+            <li><a class="dropdown-item" href="#" *ngFor="let continent of continents" [click]="sortbyRegion()">{{ continent.region }}</a></li>
           </ul>
         </li>
       </ul>
