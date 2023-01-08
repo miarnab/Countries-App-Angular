@@ -6,18 +6,22 @@ import { AppComponent } from './app.component';
 import { ShowCountriesComponent } from './show-countries/show-countries.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
+import { CountryComponent } from './country/country.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
     AppComponent,
     ShowCountriesComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    CountryComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

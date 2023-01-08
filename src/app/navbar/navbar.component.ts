@@ -14,8 +14,8 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
     this.continents=[
       {region: "Africa"},
-      {region: "Americas"},
-      {region: "Antarctica"},
+      {region: "North America"},
+      {region: "South America"},
       {region: "Asia"},
       {region: "Europe"},
       {region: "Oceania"}
@@ -26,9 +26,6 @@ export class NavbarComponent implements OnInit {
         .sendData(regionName)
           .subscribe(continents=>this.continents=continents)
     })
-  }
-  sortbyRegion(){
-
   }
 
 }

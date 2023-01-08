@@ -1,3 +1,6 @@
+<app-navbar></app-navbar>
+<br>
+<br>
 <div class="centerdiv">
   <h1>List of Countries</h1>
 </div>
@@ -29,14 +32,17 @@
     </tr>
   </thead>
   <tbody *ngFor="let country of countries | async, let i=index">
-    <tr>
+      <tr>
       <td>{{ i+1 }}</td>
-      <td>{{ country.name.common }}</td>
+      <td><a [routerLink]="['/country', country.name.common ]">{{ country.name.common }}</a></td>
       <td>{{ country.capital }}</td>
       <td>{{ country.continents }}</td>
-      <td><a href="{{ country.maps.googleMaps }}" target="_blank">View Map</a></td>
+      <td><a [routerLink]="[country.maps.googleMaps]" target="_blank">View Map</a></td>
       <td>{{ country.population }}</td>
     </tr>
   </tbody>
 </table>
 </div>
+<br>
+<br>
+<app-footer></app-footer>
